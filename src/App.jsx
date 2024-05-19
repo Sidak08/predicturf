@@ -64,7 +64,16 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route
+            path="/dashboard"
+            element={
+              <PrivateRoute>
+                <Dashboard data={data} />
+              </PrivateRoute>
+            }
+          />
         </Routes>
+
       </AuthProvider>
     </Router>
   );
